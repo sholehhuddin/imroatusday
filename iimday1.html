@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+        }
+        
+        #content::before,
+        #content::after {
+            content: "";
+            position: absolute;
+            top: -50px;
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            border-radius: 50%;
+            animation: balloon-animation 2s ease-in-out infinite;
+        }
+        
+        #content::before {
+            left: -50px;
+        }
+        
+        #content::after {
+            right: -50px;
+        }
+        
+        @keyframes balloon-animation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+        #birthday-image {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        
+        #click-button {
+            margin-top: 20px;
+        }
+        
+        #click-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <img id="birthday-image" src="hbd.png" alt="Hiasan Ulang Tahun">
+        <h2>Selamat Ulang Tahun Imroatus Sholihah!</h2>
+        <p>Untuk melihat ucapan selamat ulang tahun, klik tombol di bawah ini:</p>
+        <div id="click-button">
+            <a href="iimday2.html">Klik Disini</a>
+        </div>
+    </div>
+</body>
+
+</html>

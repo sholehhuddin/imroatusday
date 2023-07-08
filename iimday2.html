@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        #birthday-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        
+        #cake-image {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        
+        #balloons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .balloon {
+            width: 80px;
+            height: 120px;
+            border-radius: 50% 50% 40% 40%;
+            margin: 10px;
+            transform: rotate(-10deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            animation: balloon-animation 2s ease-in-out infinite;
+        }
+        
+        @keyframes balloon-animation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+        .balloon-red {
+            background-color: #f00;
+        }
+        
+        .balloon-blue {
+            background-color: #00f;
+        }
+        
+        .balloon-yellow {
+            background-color: #ff0;
+        }
+        
+        .balloon-green {
+            background-color: #0f0;
+        }
+        
+        .balloon-purple {
+            background-color: #f0f;
+        }
+        
+        #birthday-wishes {
+            margin-bottom: 20px;
+        }
+        
+        #birthday-wishes ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #birthday-wishes ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .audio-control {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .audio-control button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .audio-control button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Selamat Ulang Tahun Imroatus Sholihah <3 </h1>
+    </div>
+    <p></p>
+    <div class="audio-control">
+        <button id="audio-control-btn">Klik Disini <3</button>
+    </div>
+    <audio id="audio">
+        <source src="iim.mp3" type="audio/mpeg">
+        Maaf, browser Anda tidak mendukung elemen audio.
+    </audio>
+    </div>
+    <div id="content">
+        <img id="birthday-image" src="ims.jpg" alt="Foto Kalian Berdua">
+        <img id="cake-image" src="hbd.png" alt="Kue Ulang Tahun">
+        <div id="balloons">
+            <div class="balloon balloon-red">1</div>
+            <div class="balloon balloon-blue">2</div>
+            <div class="balloon balloon-yellow">3</div>
+            <div class="balloon balloon-green">4</div>
+            <div class="balloon balloon-purple">5</div>
+        </div>
+        <div id="birthday-wishes">
+            <h2>Ucapan Selamat Ulang Tahun</h2>
+            <ul>
+                <li>Selamat ulang tahun sayang</li>
+                <li>Di hari istimewa ini, aku ingin mengucapkan selamat ulang tahun dan mengucapkan terima kasih atas semua cinta dan kebahagiaan yang kamu berikan kepadaku.</li>
+                <li>Semoga setiap tahun yang berlalu membuat kita semakin kuat dan bahagia bersama. Selamat ulang tahun, sayang!</li>
+                <li>Aku bersyukur karena memiliki kamu sebagai pasangan hidupku. Selamat ulang tahun, semoga semua impianmu tercapai dan kehidupanmu penuh dengan kebahagiaan.</li>
+                <li>I love U Imroatus Sholihah <3 </li>
+            </ul>
+        </div>
+
+    <script>
+        // Skrip untuk mengontrol pemutaran audio
+        const audio = document.getElementById('audio');
+        const audioControlBtn = document.getElementById('audio-control-btn');
+
+        audioControlBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                audioControlBtn.textContent = 'Pause Audio';
+            } else {
+                audio.pause();
+                audioControlBtn.textContent = 'Putar Audio';
+            }
+        });
+    </script>
+</body>
+
+</html>
